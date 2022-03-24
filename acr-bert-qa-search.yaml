@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kismama-deployment
+  labels:
+    app: kismama-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kismama
+  template:
+    metadata:
+      labels:
+        app: kismama
+    spec:
+      containers:
+      - name: kismama
+        image: aidemos.azurecr.io/kismama:latest
+        ports:
+        - containerPort: 80

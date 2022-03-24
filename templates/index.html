@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='stylesheets/index.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+
+    
+
+    <title>Kismama chatbot</title>
+    
+</head>
+<body>
+
+    <div id="page-container">
+        <div id="content-wrap">
+            <header>
+                <div class="logo">
+                        <img id="logoImg" src="{{url_for('static',filename = 'images/DJP_logo.png')}}" alt="logo">      
+                </div>
+                 
+            </header>
+            <hr class="headerLine">
+            
+            <div class="container">
+                <img class="hero-image" src="{{url_for('static',filename = 'images/mainImage.png')}}" alt="image">
+                <h1> <span id="boldText">Bárhol, bármikor</span><br> díjmentes szolgáltatás<br> az <span id="boldText">Ön számára</span> </h1>
+                <hr class="breakLine">
+            </div>
+            
+            <p >Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit. Fusce a<br> efficitur felis. Mauris eget turpis ac<br> dolor tincidunt euismod.<br> Pellentesque eget pulvinar libero.<br> Suspendisse sodales orci at neque<br> congue laoreet. Phasellus sed mattis<br> magna. Pellentesque varius laoreet<br> convallis. Fusce sit<br> amet neque sit amet velit facilisis vehicula</p>
+            <hr class="breakLine">
+            <button class="askButton">Kérdezek</button>
+        
+            <!--    <Chat ablak>  -->
+            <section>
+                <button class="chat-btn"> 
+                    <i class="material-icons"> comment </i>
+                </button>
+        
+                <div class="chat-popup">
+                    <div class="chat-header">
+                        <button class="header-exit"> 
+                            <i class="material-icons"> close </i>
+                        </button>
+                    </div>
+                    <!--<div class="badge">1</div> -->
+                    <div class="chat-area">
+                     <div class="income-msg">
+                         <!--<img src="./img/robotChatface2X.png" class="avatar"> -->
+                         <img src="{{url_for('static',filename = 'images/robotChatface2X.png')}}" class="avatar"></img>
+                         <span class="msg"> Szia! Bármi kérdésed van a kismamasággal kapcsolatban, kérlek fordulj hozzám bizalommal!</span>
+                     </div>   
+                    </div>
+        
+                    <div class="input-area">
+                        <input type="text" placeholder="Ide írd be a kérdésed">
+                        <button class="submit"> <i class="material-icons"> send</i></button>
+                    </div>
+                </div>
+            </section>
+            <!--<script src="main.js"></script> -->
+            <script src="{{ url_for('static',filename='main.js') }}"> </script>
+
+            <!--    </Chat ablak>  -->
+            
+        </div>
+        <footer id="footer">
+            <div class="background1"></div>
+        </footer>
+      </div>
+
+    
+</body>
+</html>
